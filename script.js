@@ -33,8 +33,13 @@ const handleTimeInput = (e) => {
   e.preventDefault();
   const timeInput = document.getElementById("time-input");
   const value = timeInput.value;
+  const dateSubmit = document.getElementById("date-submit");
+
   if (value) {
-    setInterval(getTimeLeft, 1000);
+    const myInterval = setInterval(getTimeLeft, 1000);
+    dateSubmit.addEventListener('click', () => {
+      clearInterval(myInterval);
+    });
   }
 };
 
@@ -48,10 +53,12 @@ const getDateLeft = (value) => {
   const yearsLeft = Number(Math.abs(years - 1970));
   const monthsLeft = Number(Math.abs(months - 1));
   const daysLeft = Number(Math.abs(days - 1));
+  hideDisplays();
   updateDateDisplay(yearsLeft, monthsLeft, daysLeft);
 };
 
-const getTimeLeft = (value) => {
+const getTimeLeft = () => {
+  console.log('timeLeft value');
   const timeInput = document.getElementById("time-input");
   const value = timeInput.value;
   const str = new Date().toDateString();
@@ -64,6 +71,7 @@ const getTimeLeft = (value) => {
   const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+  hideDisplays();
   updateTimeDisplay(hours, minutes, seconds);
 };
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="script2.js" defer></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="top-container">
+            <div class="heading-container">
+                <h2 class="heading">Time left:</h2>
+            </div>
+            <div id="date-container">
+                <div id="years" class="date-div">
+                    <div id="years-left" class="time-text"></div>
+                    <div class="time-label">Years,</div>
+                </div>
+                <div id="months" class="date-div">
+                    <div id="months-left" class="time-text"></div>
+                    <div class="time-label">Months,</div>
+                </div>
+                <div id="days" class="date-div">
+                    <div id="days-left" class="time-text"></div>
+                    <div class="time-label">Days</div>
+                </div>
+            </div>
+            <div id="time-container">
+                <div id="hours" class="time-div">
+                    <div id="hours-left" class="time-text"></div>
+                    <div class="time-label">Hours,</div>
+                </div>
+                <div id="minutes" class="time-div">
+                    <div id="minutes-left" class="time-text"></div>
+                    <div class="time-label">Minutes,</div>
+                </div>
+                <div id="seconds" class="time-div">
+                    <div id="seconds-left" class="time-text"></div>
+                    <div class="time-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+        <div id="bottom-container">
+            <div class="heading-container">
+                <h2 class="heading">Enter a date or time:</h2>
+            </div>
+            <div id="inputs-container">
+                <div id="date-input-container" class="input-container">
+                    <form action="#">
+                        <input type="date" name="date-input" id="date-input">
+                    </form>
+                </div>
+                <div id="submit-container">
+                  <button type="submit" id="submit">Submit</button>
+                </div>
+                <div id="time-input-container" class="input-container">
+                    <form action="#">
+                        <input type="time" name="time-input" id="time-input">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -16,7 +16,8 @@
 }
 
 #container {
-  grid-template-rows: 1fr 1fr;
+  background-color: blanchedalmond;
+  grid-template-rows: 1fr 3fr;
   height: 100vh;
   width: 100vw;
 }
